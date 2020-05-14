@@ -22,14 +22,14 @@ stages: #stages run in sequence
         steps:
           - script: 'dotnet build' #run 'dotnet build' in the VM console
           - script: echo Hey there 
-  - stage: 
-    jobs:
+#  - stage: 
+#    jobs:
       - job: 'test'
         dependsOn: 'build' #if 'build' fails, this job will not run
         steps:
           - script: 'dotnet test' #run 'dotnet test' in the VM console
-  - stage: 
-    jobs: 
+#  - stage: 
+#    jobs: 
       - job: 'publish'
         dependsOn: 'test' #if 'test' fails, this job will not run
         steps: 
