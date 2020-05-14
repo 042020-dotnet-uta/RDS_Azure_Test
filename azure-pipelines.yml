@@ -20,7 +20,7 @@ stages: #stages run in sequence
     jobs:
       - job: 'build'
         steps:
-          - script: 'dotnet build RDS_Azure_Test/AzureTest' #run 'dotnet build' in the VM console
+          - script: 'dotnet build RDS_Azure_Test/AzureTest/AzureTest.sln' #run 'dotnet build' in the VM console
           - script: echo Hey there 
 #  - stage: 
 #    jobs:
